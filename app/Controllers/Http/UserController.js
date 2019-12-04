@@ -10,6 +10,13 @@ class UserController {
 
         return user
     }
+
+    async index ({ request }) {
+        const { page } = request.get()
+        const users = await User.query().fetch()
+        
+        return users
+      }
 }
 
 module.exports = UserController

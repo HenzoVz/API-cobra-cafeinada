@@ -14,8 +14,7 @@ class ProductController {
    */
   async index ({ request }) {
     const { page } = request.get()
-    const products = await Product.query()
-      .paginate(page)
+    const products = await Product.query().with('file').fetch()
 
     return products
   }
@@ -34,9 +33,10 @@ class ProductController {
       'description',
       'amount',
       'value',
-      'file_id'])
+      'file_id'
+    ])
 
-    const product = await Product.create({ ...data})
+    const product = await Product.create(data)
 
     return product
   }
@@ -44,6 +44,8 @@ class ProductController {
   async show ({ params, response }) {
     try {
       const product = await Product.findOrFail(params.id)
+
+      await product.load('file')
 
       return product
     } catch (error) {
@@ -71,6 +73,9 @@ class ProductController {
       'value',
       'file_id'])
 
+      //entra la celular descaregou 
+      // henzuuuu
+      // vai entrar nao ? 
     product.merge(data)
 
     await product.save()
