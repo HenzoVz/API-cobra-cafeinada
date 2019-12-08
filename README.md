@@ -5,7 +5,7 @@ docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ### Instalar AdonisJs
 npm i -g @adonisjs/cli
 
-### Gerar a tabela no banco
+### Gerar a tabela no banco é na raíz do projeto da API
 adonis migration:run
 ### Resetar os dados dentro das tabelas
 adonis migration:rollback
