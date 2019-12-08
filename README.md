@@ -13,23 +13,39 @@ adonis migration:rollback
 ### criar arquivo chamando .env no root e colar 
 
 HOST=127.0.0.1
+
 PORT=3333
+
 NODE_ENV=development
+
 APP_NAME=AdonisJs
+
 APP_URL=http://${HOST}:${PORT}
+
 CACHE_VIEWS=false
+
 APP_KEY=qMyewmTm5zBxqReEMKZve4a6ASwKJrMy
+
 DB_CONNECTION=pg
+
 DB_HOST=127.0.0.1
+
 DB_PORT=5432
+
 DB_USER=postgres
+
 DB_PASSWORD=12345
+
 DB_DATABASE=DB_DEV_COBRA_CAFEINADA
+
 HASH_DRIVER=bcrypt
 
 MAIL_HOST= smtp.mailtrap.io
+
 MAIL_PORT= 2525
+
 MAIL_USERNAME= c60c4aec9c6316
+
 MAIL_PASSWORD= 1d714f3778766b
 
 # Adonis API application
