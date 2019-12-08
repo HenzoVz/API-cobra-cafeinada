@@ -10,6 +10,9 @@ adonis migration:run
 ### Resetar os dados dentro das tabelas
 adonis migration:rollback
 
+### Rodar o adonis no localhost
+adonis serve --dev
+
 ### criar arquivo chamando .env no root e colar 
 
 HOST=127.0.0.1
